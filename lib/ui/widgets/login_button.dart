@@ -3,8 +3,9 @@ import 'package:flutter_login_ui/ui/styles/color_styles.dart';
 import 'package:flutter_login_ui/ui/styles/text_styles.dart';
 
 class RoundedButtonWidget extends StatelessWidget {
-  RoundedButtonWidget({this.title, this.onPressed});
+  RoundedButtonWidget({this.title, this.colour, this.onPressed});
 
+  final Color colour;
   final String title;
   final Function onPressed;
 
