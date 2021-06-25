@@ -8,9 +8,14 @@ import 'package:flutter_login_ui/ui/widgets/login_button.dart';
 import 'package:flutter_login_ui/model/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-class WelcomeView extends StatelessWidget {
+class WelcomeView extends StatefulWidget {
   const WelcomeView({Key key}) : super(key: key);
 
+  @override
+  _WelcomeViewState createState() => _WelcomeViewState();
+}
+
+class _WelcomeViewState extends State<WelcomeView> {
   @override
   Widget build(BuildContext context) {
     DynamicTheme themeProvider = Provider.of<DynamicTheme>(context);
@@ -25,17 +30,7 @@ class WelcomeView extends StatelessWidget {
                     height: context.dynamicHeight(0.5),
                     width: context.dynamicWidth(1),
                     decoration: UIBoxDecoration.boxStyle,
-                    child: Stack(children: [
-                      changeThemePositioned(themeProvider),
-                      Positioned(
-                          child: Center(
-                        child: Text(
-                          UITextConstants.welcome,
-                          style: UITextStyles.headerStyle,
-                        ),
-                      )),
-                      bugsbunnyPositioned(context)
-                    ]),
+                    child: stackWelcome(themeProvider, context),
                   ),
                   Container(
                     child: Padding(
@@ -44,6 +39,9 @@ class WelcomeView extends StatelessWidget {
                         children: [
                           RoundedButtonWidget(
                             title: UITextConstants.logintext,
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/second');
+                            },
                           ),
                           RoundedButtonWidget(
                             title: UITextConstants.registertext,
@@ -59,6 +57,20 @@ class WelcomeView extends StatelessWidget {
         );
       },
     );
+  }
+
+  Stack stackWelcome(DynamicTheme themeProvider, BuildContext context) {
+    return Stack(children: [
+      changeThemePositioned(themeProvider),
+      Positioned(
+          child: Center(
+        child: Text(
+          UITextConstants.welcome,
+          style: UITextStyles.headerStyle,
+        ),
+      )),
+      bugsbunnyPositioned(context)
+    ]);
   }
 
   Positioned bugsbunnyPositioned(BuildContext context) {

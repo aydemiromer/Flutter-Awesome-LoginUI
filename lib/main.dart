@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_ui/auth/login.dart';
 import 'package:flutter_login_ui/auth/welcome.dart';
 import 'package:flutter_login_ui/model/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -13,9 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<DynamicTheme>(context);
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme:
-            themeProvider.getDarkMode() ? ThemeData.dark() : ThemeData.light(),
-        home: WelcomeView());
+      debugShowCheckedModeBanner: false,
+      theme: themeProvider.getDarkMode() ? ThemeData.dark() : ThemeData.light(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => WelcomeView(),
+        '/second': (context) => LoginView(),
+      },
+    );
   }
 }

@@ -15,4 +15,27 @@ class UIBoxDecoration {
         bottomRight: Radius.circular(60),
       ),
       color: UIColorStyles.PRIMARY_COLOR);
+
+  static BoxDecoration boxStyleLoginPage = BoxDecoration(
+      /*boxShadow: [
+        BoxShadow(
+          color: UIColorStyles.PRIMARY_COLOR,
+          blurRadius: 10.0,
+          spreadRadius: 1.0,
+        ),
+      ],*/
+
+      color: UIColorStyles.PRIMARY_COLOR);
+
+  static BoxDecoration boxStyleLoginPageBottom = BoxDecoration(
+      /*boxShadow: [
+        BoxShadow(
+          color: UIColorStyles.TEXT_MODE,
+          blurRadius: 10.0,
+          spreadRadius: 1.0,
+        ),
+      ],*/
+      borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(60), topRight: Radius.circular(60)),
+      color: Colors.white);
 }

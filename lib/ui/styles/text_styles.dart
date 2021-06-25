@@ -12,7 +12,7 @@ class UITextStyles {
       color: UIColorStyles.TEXT_MODE);
   static TextStyle passiveTextStyle = TextStyle(
       fontWeight: FontWeight.w500,
-      fontSize: 8,
+      fontSize: 16,
       color: UIColorStyles.BLACK_TEXT_MODE);
 }
 // use : style: UITextStyles.
