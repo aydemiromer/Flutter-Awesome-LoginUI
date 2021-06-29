@@ -45,6 +45,9 @@ class _WelcomeViewState extends State<WelcomeView> {
                           ),
                           RoundedButtonWidget(
                             title: UITextConstants.registertext,
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/third');
+                            },
                           ),
                         ],
                       ),

@@ -50,7 +50,9 @@ flutter:
    - assets/images/bugsbunny-vector.png
    - assets/images/roadrunnerandfox.png
    - assets/images/cloudfox.png
-  #   - images/a_dot_ham.jpeg
+   - assets/images/donaldduck.png
+   - assets/images/daffyducknew.png
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

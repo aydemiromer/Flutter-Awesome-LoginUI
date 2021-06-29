@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_ui/auth/login.dart';
+import 'package:flutter_login_ui/auth/register.dart';
 import 'package:flutter_login_ui/auth/welcome.dart';
 import 'package:flutter_login_ui/model/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => WelcomeView(),
         '/second': (context) => LoginView(),
+        '/third': (context) => RegisterView(),
       },
     );
   }
