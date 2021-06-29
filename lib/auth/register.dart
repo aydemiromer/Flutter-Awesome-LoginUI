@@ -35,10 +35,22 @@ class _RegisterViewState extends State<RegisterView> {
                 email = value;
               },
               decoration: kTextFieldDecoration.copyWith(
+                  hintText: UITextConstants.phone,
+                  hintStyle: UITextStyles.passiveTextStyle,
+                  suffixIcon:
+                      IconButton(icon: Icon(Icons.phone), onPressed: null)),
+            ),
+            TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
+              onChanged: (value) {
+                password = value;
+              },
+              decoration: kTextFieldDecoration.copyWith(
                   hintText: UITextConstants.email,
                   hintStyle: UITextStyles.passiveTextStyle,
                   suffixIcon:
-                      IconButton(icon: Icon(Icons.mail), onPressed: null)),
+                      IconButton(icon: Icon(Icons.email), onPressed: null)),
             ),
             TextField(
               obscureText: true,
@@ -48,6 +60,18 @@ class _RegisterViewState extends State<RegisterView> {
               },
               decoration: kTextFieldDecoration.copyWith(
                   hintText: UITextConstants.password,
+                  hintStyle: UITextStyles.passiveTextStyle,
+                  suffixIcon:
+                      IconButton(icon: Icon(Icons.star), onPressed: null)),
+            ),
+            TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
+              onChanged: (value) {
+                password = value;
+              },
+              decoration: kTextFieldDecoration.copyWith(
+                  hintText: UITextConstants.repassword,
                   hintStyle: UITextStyles.passiveTextStyle,
                   suffixIcon:
                       IconButton(icon: Icon(Icons.star), onPressed: null)),
@@ -102,7 +126,7 @@ class _RegisterViewState extends State<RegisterView> {
             child: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/images/donaldduck.png'))),
+                      image: AssetImage('assets/images/daffy.png'))),
             )),
       ],
     );
